@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/scripts.js"></script>
+    <title>Web develop</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <button onClick="window.location.reload();">
+                <img class="header-logo" src="images/logo.png" alt="logo">
+            </button>
+            <nav class="header-content">
+                <a href="#" id="default-link">Главная</a>
+                <a href="#" id="first-term-link">Первый семестр</a>
+                <a href="#">Второй семестр</a>
+                <a href="#" id="services-link">Услуги</a>
+                <a href="#" id="settings-link">Настройки</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <main class="main-content">
+            <details class="main-content-left">
+                <summary class="navigation">Навигация по странице</summary>
+                <div id="navigation-links"></div>
+            </details>
+            <div class="default-content" id="default">
+                <h1 class="main-title">Добро пожаловать на мой сайт</h1>
+                <div class="user-info">
+                    <button class="replace-btn"></button>
+                    <p class="user-text">Меня зовут Смирнов Егор Андреевич и я начинающий специалист по веб разработке
+                    </p>
+                    <button id="user-btn">
+                        <img class="user-image" src="images/user-logo.jpg" alt="user">
+                    </button>
+                </div>
+                <h3 class="content-title" id="frontend">Фронтенд</h3>
+                <p>
+                    Фронтенд (англ. frontend) — это разработка пользовательских функций и
+                    интерфейса. К ним относится всё, что пользователи видят на сайте или в
+                    приложении, и с чем можно взаимодействовать: картинки, выпадающие списки,
+                    меню, анимация, карточки товаров, кнопки, чекбоксы, интерактивные элементы.
+                    На любой странице в интернете виден результат работы фронтенд-разработчика.
+                </p>
+                <video src="objects/frontend.mp4" type="video/mp.4" autoplay controls>
+                    The video is currently unavailable
+                </video>
+                <h3 class="content-title" id="backend">Бэкенд</h3>
+                <p>
+                    Бэкенд — это всё, что скрыто от пользователей, логика сайта или приложения.
+                    Чаще всего бэкенд связан с базой данных, где хранится информация. Она может
+                    передаваться из одного сервиса в другой — например, Яндекс Лавка сохраняет
+                    адрес доставки, и он затем может автоматически подтянуться при заказе в Яндекс Еде.
+                </p>
+                <video src="objects/backend.mp4" type="video/mp.4" id="video" autoplay controls>
+                    The video is currently unavailable
+                </video>
+            </div>
+
+            <div class="services-content" id="services">
+                <h2 class="main-title">Услуги</h2>
+                <h3 class="content-title" id="develop">Разработка веб приложений</h3>
+                <div class="card-wrapper">
+                    <figure class="card">
+                        <img class="card-image" src="images/vizitka.jpg" alt="vizitka">
+                        <button class="card-btn">Заказать</button>
+                    </figure>
+                    <figure class="card">
+                        <img class="card-image" src="images/corporative.jpg" alt="corporative">
+                        <button class="card-btn">Заказать</button>
+                    </figure>
+                    <figure class="card">
+                        <img class="card-image" src="images/shop.jpg" alt="shop">
+                        <button class="card-btn">Заказать</button>
+                    </figure>
+                    </figure>
+                </div>
+
+                <div>
+                    <p>
+                        Разработка веб-приложений — это процесс создания интерактивных программ, которые работают в
+                        веб-браузере. Веб-приложения могут быть простыми, как одностраничные сайты, или сложными, как
+                        социальные сети или интернет-магазины. В этой статье мы рассмотрим основные этапы разработки
+                        веб-приложений и познакомимся с ключевыми технологиями и инструментами, которые помогут вам
+                        создать свое первое веб-приложение.
+
+                    </p>
+                    <p>
+                        <nobr>Веб-приложения</nobr> играют важную роль в&nbsp;современном мире, предоставляя
+                        пользователям доступ к&nbsp;разнообразным сервисам и&nbsp;информации через интернет. Они могут
+                        быть использованы для различных целей, таких как <nobr>онлайн-торговля</nobr>, социальные сети,
+                        управление проектами, обучение и&nbsp;многое другое. <nobr>Веб-приложения</nobr> обладают рядом
+                        преимуществ, включая доступность с&nbsp;любого устройства с&nbsp;<nobr>интернет-соединением
+                        </nobr>, возможность обновления контента в&nbsp;реальном времени и&nbsp;интеграцию
+                        с&nbsp;другими сервисами и&nbsp;платформами.
+                    </p>
+                    <h3 class="content-title" id="stack">Стек технологий</h3>
+                    <div class="grid-container">
+                        <a class="grid-item" href="https://html5book.ru/html-html5/" target="_blank">HTML</a>
+                        <a class="grid-item" href="https://hcdev-ru.pages.dev/css/" target="_blank">CSS</a>
+                        <a class="grid-item" href="https://metanit.com/web/javascript/" target="_blank">JavaScript</a>
+                        <a class="grid-item" href="https://fastapitiangolo.pages.dev/ru/tutorial/"
+                            target="_blank">FastAPI</a>
+                        <a class="grid-item" href="https://docs.sqlalchemy.org/en/20/" target="_blank">SQLAlchemy</a>
+                        <a class="grid-item" href="https://docs.aiogram.dev/en/stable/" target="_blank">Aiogram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-term-content" id="first-term">
+                <h2 class="main-title">Первый семестр</h2>
+                <h3 class="content-title" id="lection">Лекции</h3>
+                <button class="lection-show">Показать лекции</button>
+                <table class="lection-table">
+                    <thead>
+                        <tr>
+                            <th>Номер</th>
+                            <th>Тема</th>
+                            <th>Посещение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Основы языка HTML</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Углублённое изучение HTML</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Основы работы с CSS</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Адаптивная вёрстка. Flexbox и Grid Layout</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Bootstrap - работа с фреймворком</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Основы языка JavaScript</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Работа с DOM и событиями в JavaScript</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Введение в Github и GitHub Pages</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="content-title" id="practice">Практики</h3>
+                <button class="practice-show">Показать практики</button>
+                <table class="practice-table">
+                    <thead>
+                        <tr>
+                            <th>Номер</th>
+                            <th>
+                                <p id="change-text">Темы первого семестра</p>
+                                <button id="change-btn">↺</button>
+                            </th>
+                            <th>Посещение</th>
+                            <th>Выполнение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Основы языка HTML</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Формы и кнопки в HTML</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Таблицы и интерактивные элементы HTML</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Основы работы с CSS</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Работа с классами CSS</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Работа с сетками и разметкой в HTML</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Адаптивная верстка</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Bootstrap</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td id="practice-nine" style="cursor: pointer;">Основы языка JavaScript</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td id="practice-ten" style="cursor: pointer;">Базовые задачи на JS</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>DOM-стркутура приложений и работа с объектами в языке JS</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Встраивание скриптов</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Отладка сценариев</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Анимации и работа с ними</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>GitHub</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Защита проекта</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="content-title" id="location">Место проведения занятий</h3>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A4371e35ed16f1b25ad8c0d20df4c984982ad2601be0034ed15ad9eb044735283&amp;source=constructor"
+                    frameborder="0">
+                </iframe>
+                <h3 class="content-title" id="criterion">Критерии оценивания</h3>
+                <object data="objects/attestation.pdf" type="application/pdf">
+                    <p>This browser does not support PDFs. Please download the PDF to view it:
+                        <a href="objects/attestation.pdf">Download PDF</a>
+                    </p>
+                </object>
+            </div>
+
+            <div class="settings-content" id="settings">
+                <h2 class="main-title">Настройки</h2>
+                <h3 class="content-title">Цвет страницы</h3>
+
+                <div class="color-settings">
+                    <label for="color-picker">Выберите цвет фона</label>
+                    <input type="color" id="color-bg-picker">
+                    <button id="reset-bg-picker">Сбросить цвет</button>
+                </div>
+                <div class="color-settings">
+                    <label for="color-picker">Выберите цвет текста</label>
+                    <input type="color" id="color-picker">
+                    <button id="reset-picker">Сбросить цвет</button>
+                </div>
+                <h3 class="content-title">Время</h3>
+
+                <div class="time-settings">
+                    <label>Текущее время</label>
+                    <button id="time-picker">Посмотреть</button>
+                </div>
+                <h3 class="content-title">Тема</h3>
+                <div class="theme-settings">
+                    <label for="page-switcher">Сменить тему</label>
+                    <select id="page-switcher" style="width: 60%; height: 2em; margin-left: 1em;">
+                        <option value="index.html">Настраиваемая тема</option>
+                        <option value="new_index.html">Светлая тема</option>
+                    </select>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">@ Смирнов Егор Андреевич</p>
+            <a href="https://www.instagram.com/e_smirnoov?igsh=MW1kZ3UyN2VsNTY3cg==" target="_blank">
+                <img class="footer-logo-inst" src="images/inst-logo.png" alt="instagram">
+            </a>
+            <a href="https://m.vk.com/e_smirnoov" target="_blank">
+                <img class="footer-logo-vk" src="images/vk-logo.png" alt="vk">
+            </a>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+        <div class="registration-wrapper" id="registration">
+            <form class="registration-form">
+                <h2>Разработка веб-приложения</h2>
+                <p>
+                    Заполните форму и мы свяжемся с вами в ближайшее
+                    время для уточнения деталей.
+                </p>
+                <div class="input-field">
+                    <label for="username">ФИО</label>
+                    <input type="text" name="username" placeholder="Иванов Иван Иванович" maxlength="50">
+                    <i class='bx bxs-user icon'></i>
+                </div>
+                <div class="input-field">
+                    <label for="email">Электронная почта</label>
+                    <input type="email" name="email" class="email" placeholder="example@mail.ru" maxlength="50">
+                    <i class='bx bxs-envelope icon'></i>
+                </div>
+                <div class="input-field">
+                    <label for="number">Номер телефона</label>
+                    <input type="tel" name="number" placeholder="+7 (999)-999-99-99" maxlength="15">
+                    <i class='bx bx-phone icon'></i>
+                </div>
+                <div class="input-field select-option">
+                    <select id="countrySelect">
+                        <option>Выберите страну</option>
+                        <i class='bx bx-chevrons-down'></i>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="datepicker">Дата рождения</label>
+                    <input type="date" id="datepicker" maxlength="10">
+                    <i class='bx bx-calendar icon'></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="comment" placeholder="Комментарий">
+                    <i class='bx bx-chat icon-comment'></i>
+                </div>
+                <div class="check-field">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">Я согласен на обработку моих персональных данных.</label>
+                </div>
+                <button type="submit">Отправить заявку</button>
+                <img src="images/cross-close.png" alt="Закрыть" class="close-icon" id="closeBtn">
+            </form>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,939 @@
+html {
+    position: fixed
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'uncage', sans-serif;
+    font-size: 1.1vw;
+    border: 0.1em solid blue;
+    flex-direction: column;
+    line-height: 1.5em;
+    color: whitesmoke;
+    background-color: black;
+    background: black url("/images/background.jp") no-repeat center center / cover;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease, outline-color 0.7s ease-in-out;
+}
+
+a:hover {
+    color: blue;
+    transform: scale(1.05);
+}
+
+a:focus {
+    outline-color: cyan;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+label {
+    margin: 0;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1em solid blue;
+}
+
+.header-wrapper button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.header-content {
+    font-size: 1.1em;
+}
+
+.header-content a {
+    margin: 0 0.5em;
+}
+
+.header-logo {
+    padding-top: 1em;
+    width: 4em;
+    height: 4em;
+}
+
+.main-container {
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+
+.main-content-left {
+    border-right: 0.1em solid blue;
+    width: 21vw;
+    padding: 1.5em;
+    font-size: 1em;
+}
+
+.navigation {
+    padding: 1.5em 0 0.75em;
+    cursor: pointer;
+    transition: outline-color 0.3s ease;
+}
+
+.navigation:focus {
+    outline-color: cyan;
+}
+
+.navigation-link {
+    padding-bottom: 0.5em;
+    font-size: 1em;
+    display: block;
+}
+
+.default-content {
+    padding: 2em;
+    width: 78.5vw;
+    flex: 1;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.default-content video {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.main-title {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+}
+
+.main-title:first-child {
+    cursor: pointer;
+}
+
+.content-title {
+    font-size: 1.2em;
+    margin: 2em 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    height: 8em;
+    width: auto;
+    cursor: pointer;
+    transition: all 1s ease-in;
+}
+
+
+.user-text {
+    flex: 1;
+}
+
+.services-content,
+.first-term-content {
+    display: none;
+    padding: 2em;
+    width: 78.5vw;
+    overflow: auto;
+    scroll-behavior: smooth;
+    border-right: blue;
+}
+
+.first-term-content iframe {
+    height: 40em;
+    width: 100%;
+    padding: 1.2em;
+    box-shadow: 0 0 2em rgba(242, 242, 245, 0.7);
+    -webkit-box-shadow: 0 0 2em rgba(242, 242, 245, 0.7);
+    -moz-box-shadow: 0 0 2em rgba(242, 242, 245, 0.7);
+}
+
+.first-term-content object {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2em 1em rgba(113, 106, 101, 0.7);
+    -webkit-box-shadow: 0 0 2em rgba(113, 106, 101, 0.7);
+    -moz-box-shadow: 0 0 2em rgba(113, 106, 101, 0.7);
+}
+
+
+.lection-table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    box-shadow: 0 0 2em rgba(255, 233, 137, 0.7);
+    -webkit-box-shadow: 0 0 2em rgba(255, 233, 137, 0.7);
+    -moz-box-shadow: 0 0 2em rgba(255, 233, 137, 0.7);
+}
+
+
+.lection-table thead tr {
+    background-color: burlywood;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.lection-table th,
+.lection-table td {
+    padding: 1em;
+    text-align: center;
+}
+
+
+.lection-table tbody tr:nth-of-type(even) {
+    color: black;
+    background-color: whitesmoke;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.lection-table tbody tr:nth-of-type(odd) {
+    color: whitesmoke;
+    background-color: black;
+    transition: transform 0.3s ease;
+}
+
+.lection-table tbody tr:hover {
+    background-color: blue;
+    transform: scale(1.02);
+}
+
+.lection-show, 
+.practice-show {
+    color: whitesmoke;
+    background-color: black;
+    border: 0.1em solid whitesmoke;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    margin-bottom: 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.lection-show:hover, 
+.practice-show:hover {
+    transform: scale(1.03);
+    border-color: cyan;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.practice-table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    box-shadow: 0 0 2em 1em rgba(242, 100, 18, 0.7);
+    -webkit-box-shadow: 0 0 2em rgba(242, 100, 18, 0.7);
+    -moz-box-shadow: 0 0 2em rgba(242, 100, 18, 0.7);
+}
+
+.practice-table thead tr{
+    background-color: chocolate;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.practice-table th,
+.practice-table td {
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+}
+
+.practice-table th p {
+    display: inline;
+    margin-right: 0.5em;
+}
+
+.practice-table th button {
+    color: whitesmoke;
+    border-color: whitesmoke;
+    border-radius: 0.5em;
+    background-color: rgba(248, 12, 8, 0.258);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.practice-table th button:hover {
+    transform: scale(1.03);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.practice-table tbody tr:nth-of-type(odd) {
+    color: black;
+    background-color: whitesmoke;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.practice-table tbody tr:nth-of-type(even) {
+    color: whitesmoke;
+    background-color: black;
+    transition: transform 0.3s ease;
+}
+
+.practice-table tbody tr:hover {
+    background-color: blue;
+    transform: scale(1.02);
+}
+
+
+
+.card-wrapper {
+    display: flex;
+    margin-bottom: 1.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    border: 0.1em solid whitesmoke;
+    text-align: center;
+    color: antiquewhite;
+    border-radius: 2em;
+    width: auto;
+    padding: 1.5em;
+    margin: 1em 2em;
+    transition: background-color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.1em solid cyan;
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 15em;
+    height: 20em;
+    object-fit: cover;
+    border: 0.1em solid whitesmoke;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.card-btn {
+    display: block;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0.5em;
+    width: 100%;
+    height: 2em;
+    background-color: black;
+    color: whitesmoke;
+    transition: border 0.3s ease, background-color 0.3s ease, transform 0.3s ease, outline-color 0.7s ease-in-out;
+    border: 0.05em solid whitesmoke;
+}
+
+.card-btn:hover {
+    border: 0.1em solid cyan;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.3em);
+}
+
+.card-btn:focus {
+    outline-color: cyan;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2em;
+    padding: 2em;
+    border: 0.1em solid cyan;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.grid-item {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 0.1em solid whitesmoke;
+    padding: 1em;
+    border-radius: 0.7em;
+    text-align: center;
+    font-size: 1.3em;
+    box-shadow: 0 5px 10px 2px rgba(255, 255, 255, 0.3);
+    transition: border-color 0.3s ease, transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    border-color: blue;
+    color: gray;
+    transform: scale(1.05);
+}
+
+.settings-content {
+    display: none;
+    width: 78.5vw;
+    flex: 1;
+    padding: 2em;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+
+.color-settings,
+.time-settings,
+.theme-settings {
+    margin: 1em;
+    width: 30em;
+    align-items: center;
+}
+
+.color-settings input[type="color"] {
+    display: block;
+    width: 5em;
+    height: 2.5em;
+    border-radius: 0.5em;
+    outline-color: aqua;;
+    border: none;
+    margin: 1em 0 2em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-settings input[type="color"]:hover {
+    transform: scale(1.05);
+}
+
+.color-settings button,
+.time-settings button {
+    padding: 0.5em 1em;
+    margin-bottom: 2em;
+    background-color: black;
+    color: whitesmoke;
+    border: 0.1em solid whitesmoke;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.time-settings button {
+    margin-left: 1em;
+}
+
+.color-settings button:hover,
+.time-settings button:hover {
+    border-color: cyan;
+    transform: scale(1.03);
+}
+
+.color-settings button:focus,
+.time-settings button:focus {
+    outline-color: cyan;
+}
+
+
+.footer-content {
+    border-top: 0.1em solid blue;
+    height: 3.75em;
+    position: relative;
+    align-items: center;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 1.2em;
+    flex: 1;
+}
+
+.footer-logo-vk,
+.footer-logo-inst {
+    height: 2.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-logo-vk {
+    right: 4em;
+}
+
+.footer-logo-inst {
+    right: 0.75em;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 0;
+}
+
+.overlay.show {
+    display: block;
+    animation: fadeInDown 0.5s ease-in-out;
+}
+
+.registration-wrapper {
+    display: none;
+    font-family: 'American Typewriter', sans-serif;
+    font-size: 1em;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 0.5em;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    -webkit-box-shadow: 0px 0px 40px 11px rgba(19, 13, 80, 0.61);
+    -moz-box-shadow: 0px 0px 40px 11px rgba(19, 13, 80, 0.61);
+    box-shadow: 0px 0px 40px 11px rgba(19, 13, 80, 0.61);
+}
+
+.registration-wrapper.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.5);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, -55%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+.registration-wrapper h2 {
+    font-size: 1.3em;
+    margin: 1em 0;
+}
+
+.registration-form {
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 1.2em 1.5em;
+}
+
+.registration-form p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 1.3em;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 0.9em;
+    display: flexbox;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+
+.input-field label {
+    margin-left: 0.5em;
+    width: 100%;
+}
+
+.input-field input,
+select {
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 1.5em;
+    width: 100%;
+    height: 2.9em;
+    padding-left: 0.75em;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.input-field input::placeholder {
+    color: whitesmoke;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type="checkbox"] {
+    height: 1.1em;
+    width: 1.1em;
+    margin-right: 0.5em;
+    border: 0.1em solid cyan;
+    appearance: none;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.6em;
+    height: 0.6em;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.5s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: blue;
+}
+
+input[type="checkbox"]:checked::before {
+    background-color: blue;
+}
+
+input[type="checkbox"]:hover {
+    border-color: cyan;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    border-color: cyan;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent url("/images/arrow.png") no-repeat;
+    background-position: right 0.65em top 50%;
+    background-size: 1.3em 1.1em;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input:hover,
+select:hover {
+    border: 0.2em solid cyan;
+    transform: scale(1.03);
+}
+
+select:focus,
+input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline-color: cyan;
+    transform: scale(1.03);
+}
+
+
+
+.icon,
+.icon-comment {
+    color: whitesmoke;
+    position: absolute;
+    height: 0.8em;
+    right: 0.85em;
+    top: 55%;
+}
+
+.icon-comment {
+    top: 35%;
+}
+
+.close-icon {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 2em;
+    cursor: pointer;
+}
+
+
+.check-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.check-field label {
+    margin-left: 0.5em;
+}
+
+
+.registration-form button[type="submit"] {
+    margin-top: 1.5em;
+    width: 100%;
+    height: 3em;
+    border-radius: 0.8em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.registration-form button[type="submit"]:hover {
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 0.2em solid cyan;
+}
+
+.registration-form button[type="submit"]:focus {
+    outline-color: cyan;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1100px) {
+    body {
+        font-size: 2vw;
+        border: 0;
+    }
+
+    .header-content {
+        margin: 0 0.5em;
+        font-size: 1em;
+    }
+
+    .header-logo {
+        width: auto;
+        height: 5em;
+    }
+
+    .main-content {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .main-content-left {
+        display: none;
+    }
+
+    .main-title {
+        margin-bottom: 1em;
+    }
+
+    .content-title {
+        margin: 1em 0;
+    }
+
+    .user-image {
+        height: 9em;
+        width: auto;
+    }
+    .default-content,
+    .services-content,
+    .first-term-content,
+    .settings-content {
+        width: 100vw;
+    }
+
+
+    .card-image {
+        height: auto;
+        width: 15em;
+        margin-bottom: 0.8em;
+    }
+
+    .grid-item {
+        padding: 0.7em;
+        font-size: 1em;
+    }
+
+    .lection-table {
+        font-size: 0.9em;
+        line-height: 1.3em;
+    }
+    
+    
+    .practice-table {
+        font-size: 0.9em;
+        line-height: 1.3em;
+    }
+    
+
+    .first-term-content iframe {
+        height: 30em;
+        padding: 1.2em;
+    }
+    
+    .footer-logo-inst {
+        height: 2.3em
+    }
+
+    .registration-form {
+        width: 63vw;
+        padding: 2em 2em;
+    }
+
+    
+}
+
+
+@media (max-width: 512px) {
+    body {
+        font-size: 3vw;
+    }
+
+    .header-content {
+        margin-left: 1em;
+        font-size: 1em;
+    }
+
+
+    .header-logo {
+        width: 5em;
+        height: 4em;
+    }
+
+    .main-content {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .main-content-left {
+        display: none;
+    }
+
+    .main-title {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    .content-title {
+        padding: 0.8em 0;
+    }
+
+    .default-content {
+        padding: 1em;
+    }
+
+    .user-image {
+        height: 7em;
+        width: auto;
+    }
+
+    .default-content,
+    .services-content,
+    .first-term-content,
+    .settings-content {
+        padding: 1.5em;
+        width: 100vw;
+    }
+
+    .card {
+        padding: 1.6em;
+        margin: 1em 0;
+    }
+
+    .card-image {
+        height: auto;
+        width: 18em;
+        margin-bottom: 0.8em;
+    }
+
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 1.5em;
+        padding: 1.5em;
+    }
+
+    .grid-item {
+        padding: 0.4em;
+        font-size: 1em;
+    }
+
+    .lection-table {
+        font-size: 0.9em;
+        line-height: 1.3em;
+    }
+    
+    .lection-table th,
+    .lection-table td {
+        padding: 0.6em;
+    }
+    
+    
+    .practice-table {
+        font-size: 0.8em;
+        line-height: 1.3em;
+    }
+    
+    .practice-table th,
+    .practice-table td {
+        padding: 0.6em;
+    }
+    
+    .first-term-content iframe {
+        height: 25em;
+        padding: 1em;
+    }
+    
+    .registration-form {
+        width: 85vw;
+        padding: 2em;
+    }
+
+    .footer-text {
+        font-size: 1.1em;
+    }
+
+    .footer-logo-vk {
+        right: 3.5em;
+    }
+    
+    .footer-logo-inst {
+        right: 0.75em;
+        height: 2.3em
+    }
+
+}
