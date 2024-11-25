@@ -145,9 +145,8 @@ label {
 .user-info button {
     background-color: black;
     color: whitesmoke;
-    border-radius: 0.3em;
+    border-radius: 0.5em;
     margin-right: 1em;
-    padding: 0.2em;
     cursor: pointer;
     border: 0.1em solid whitesmoke;
 }
