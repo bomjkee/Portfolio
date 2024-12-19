@@ -245,13 +245,17 @@ document.addEventListener('DOMContentLoaded', function () {
         email: '',
         number: '',
         date: '',
+        country: '',
+        consent: false,
         comment: '',
 
         printData: function () {
-            console.log(`Имя: ${this.username}`);
+            console.log(`ФИО: ${this.username}`);
             console.log(`E-mail: ${this.email}`);
             console.log(`Телефон: ${this.number}`);
             console.log(`Дата рождения: ${this.date}`);
+            console.log(`Страна: ${this.country}`);
+            console.log(`Согласие на обработку ПД: ${this.consent ? 'Да' : 'Нет'}`);
             console.log(`Комментарий: ${this.comment}`);
         }
     };
@@ -261,10 +265,12 @@ document.addEventListener('DOMContentLoaded', function () {
         formData.email = form.elements['email'].value;
         formData.number = form.elements['number'].value;
         formData.date = form.elements['datepicker'].value;
+        formData.country = form.elements['countrySelect'].value;
+        formData.consent = form.elements['privacy'].checked;
         formData.comment = form.elements['comment'].value;
 
-        if (!formData.username || !formData.email || !formData.comment) {
-            alert('Заполните форму целиком');
+        if (!formData.username || !formData.email || !formData.comment || !formData.consent) {
+            alert('Заполните форму целиком и дайте согласие на обработку ПД');
             return;
         }
 
@@ -481,4 +487,5 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedPage = this.value;
         window.location.href = selectedPage;
     });
+    
 });
